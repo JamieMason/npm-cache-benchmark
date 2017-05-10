@@ -11,7 +11,9 @@ const results = {
   'npm5/npm': { average: 0, name: 'npm 5.x', runs: [] },
   'npm5/npm-cached': { average: 0, name: 'npm 5.x (cached)', runs: [] },
   'npm5/shrinkpack': { average: 0, name: 'npm 5.x (shrinkpacked)', runs: [] },
-  'npm5/shrinkpack-compressed': { average: 0, name: 'npm 5.x (shrinkpacked, compressed)', runs: [] }
+  'npm5/shrinkpack-compressed': { average: 0, name: 'npm 5.x (shrinkpacked, compressed)', runs: [] },
+  'npminstall/npminstall': { average: 0, name: 'npminstall 3.x', runs: [] },
+  'npminstall/npminstall-cached': { average: 0, name: 'npminstall 3.x (cached)', runs: [] },
 };
 
 try {
@@ -36,6 +38,8 @@ function runAll() {
     runBenchmark('npm5', ['install'], 'npm-cached');
     runBenchmark('npm5', ['install'], 'shrinkpack');
     runBenchmark('npm5', ['install'], 'shrinkpack-compressed');
+    runBenchmark('npminstall', ['--no-cache'], 'npminstall');
+    runBenchmark('npminstall', ['--cache-strict'], 'npminstall-cached');
     console.log('');
   }
 }

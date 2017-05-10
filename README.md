@@ -1,6 +1,6 @@
 # npm vs shrinkpack vs npm5 vs yarn
 
-Benchmarks of [npm][1], [npm5][2], [shrinkpack][3], and [yarn][4] install times.
+Benchmarks of [npm][1], [npm5][2], [shrinkpack][3], [yarn][4] and [npminstall][5] install times.
 
 ## Results
 
@@ -26,7 +26,7 @@ Benchmarks of [npm][1], [npm5][2], [shrinkpack][3], and [yarn][4] install times.
 ```
 git clone https://github.com/JamieMason/npm-cache-benchmark.git
 cd npm-cache-benchmark
-npm install -g npm5@5.0.0-beta.36 shrinkpack@0.18.1 yarn@0.24.1
+npm install -g npm5@5.0.0-beta.36 shrinkpack@0.18.1 yarn@0.24.1 npminstall@3.0.0-beta.4
 node index.js
 ```
 
@@ -103,3 +103,4 @@ npm 5.x (shrinkpacked, compressed): 10.60s (average 10.82s)
 [2]: https://www.npmjs.com/package/npm5
 [3]: https://github.com/JamieMason/shrinkpack
 [4]: https://github.com/yarnpkg/yarn
+[5]: https://github.com/cnpm/npminstall
